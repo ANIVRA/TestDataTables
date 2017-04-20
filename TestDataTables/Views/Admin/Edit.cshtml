@@ -1,0 +1,38 @@
+﻿
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> @ViewBag.User.FirstName @ViewBag.User.LastName </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <input type="hidden" name="userId" value="@ViewBag.User.Id" />
+            <div>
+                <div class="form-group">
+                    @Html.Label("Roles", new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.ListBox("roles", (MultiSelectList)ViewBag.Roles, new { @class = "form-control" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Update Roles" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

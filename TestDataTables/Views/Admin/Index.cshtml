@@ -1,0 +1,62 @@
+﻿@model IEnumerable<TestDataTables.Models.UsersViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> Admin Index </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <p>
+            @Html.ActionLink("Add Role", "AddUserRole")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    First Name
+                </th>
+                <th>
+                    Last Name
+                </th>
+                <th>
+                    Roles
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.LastName)
+                    </td>
+                    <td>
+                        @foreach (var role in item.Roles)
+                {
+                            <p>@role</p>
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.User.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+    </div>

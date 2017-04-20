@@ -1,0 +1,367 @@
+﻿@model TestDataTables.Models.TicketIndexViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css" />
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> Ticket Index </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        @if (User.IsInRole("Admin"))
+        {
+            <h2>All Tickets</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Assigned Developer
+                        </th>
+                        <th>
+                            OwnerUser
+                        </th>
+                        <th>
+                            Project Name
+                        </th>
+                        <th>
+                            Priority
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Created
+                        </th>
+                        <th>
+                            Updated
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.AdminTickets)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AssignedToUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OwnerUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Project.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @item.Created.Date.ToString("MM/dd/yyyy")
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Updated)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id },  new { @class="btn-sm btn-warning"}) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }, new { @class = "btn-sm btn-success" }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn-sm btn-danger" })
+                        </td>
+                    </tr>
+            }
+                </tbody>
+            </table>
+        }
+
+        @if (User.IsInRole("ProjectManager"))
+        {
+            <h2>Project Manager Tickets</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Assigned Developer
+                        </th>
+                        <th>
+                            OwnerUser
+                        </th>
+                        <th>
+                            Project Name
+                        </th>
+                        <th>
+                            Priority
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Created
+                        </th>
+                        <th>
+                            Updated
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.PMTickets)
+        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AssignedToUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OwnerUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Project.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Created)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Updated)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+        }
+                </tbody>
+            </table>
+        }
+
+        @if (User.IsInRole("Developer"))
+        {
+            <h2>Developer Tickets</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Assigned Developer
+                        </th>
+                        <th>
+                            OwnerUser
+                        </th>
+                        <th>
+                            Project Name
+                        </th>
+                        <th>
+                            Priority
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Created
+                        </th>
+                        <th>
+                            Updated
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.DevTickets)
+        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AssignedToUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OwnerUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Project.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Created)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Updated)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+        }
+                </tbody>
+            </table>
+        }
+
+        @if (User.IsInRole("Submitter"))
+        {
+            <h2>Submitter Tickets</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            Assigned Developer
+                        </th>
+                        <th>
+                            OwnerUser
+                        </th>
+                        <th>
+                            Project Name
+                        </th>
+                        <th>
+                            Priority
+                        </th>
+                        <th>
+                            Status
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Created
+                        </th>
+                        <th>
+                            Updated
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.SubTickets)
+        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AssignedToUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OwnerUser.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Project.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TicketType.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Title)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Created)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Updated)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                        </td>
+                    </tr>
+        }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@section scripts{
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable();
+        });
+    </script>
+}

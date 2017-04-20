@@ -1,0 +1,19 @@
+﻿@model TestDataTables.Models.ProjectDetailViewModel
+<h1>Team Members</h1>
+<div class="container-fluid">
+    <h2>Developers</h2>
+    @foreach (var dev in Model.Developers)
+    {
+        <p>@dev.FullName</p>
+    }
+</div>
+<hr />
+<div class="container-fluid">
+    <h2>Submitters</h2>
+    @foreach (var sub in Model.Submitters)
+    {
+        <p>@sub.FullName</p>
+    }
+</div>
+
+

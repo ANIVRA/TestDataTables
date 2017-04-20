@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VarelloAdmin</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/typicons.min.css">
+<link rel="stylesheet" href="css/varello-theme.min.css">
+<link rel="stylesheet" href="css/varello-skins.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/icheck-all-skins.css">
+<link rel="stylesheet" href="css/icheck-skins/flat/_all.css">
+<link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:400,500,600,700,300' rel='stylesheet' type='text/css'>    <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body >
+                <div class="notifications top-right"></div>
+    <div class="wrapper">
+        <div class="page-wrapper">
+            <aside class="left-sidebar">
+    <section class="sidebar-user-panel">
+        <div id="user-panel-slide-toggleable">
+            <div class="user-panel-profile-picture">
+                <img src="img/user-1-profile.jpg" alt="Tyrone G">
+            </div>
+            <span class="user-panel-logged-in-text"><span class="fa fa-circle-o text-success user-panel-status-icon"></span> Logged in as <strong> Tyrone G</strong></span>
+            <a href="app-pages/profile/update.html" class="user-panel-action-link"><span class="fa fa-pencil"></span> Manage your account</a>
+        </div>
+        <!-- <button class="user-panel-toggler" data-slide-toggle="user-panel-slide-toggleable"><span class="fa fa-chevron-up" data-slide-toggle-showing></span><span class="fa fa-chevron-down" data-slide-toggle-hidden></span></button> -->
+    </section>
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-heading">
+            Components
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="index.html">
+                <span class="typcn typcn-home sidebar-nav-link-logo"></span> Dashboard
+            </a>
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="widgets.html">
+                <span class="typcn typcn-shopping-bag sidebar-nav-link-logo"></span> Widgets <span class="badge badge-primary sidebar-nav-link-badge">6</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-link sidebar-nav-link-group ">
+            <a data-subnav-toggle>
+                <span class="typcn typcn-document sidebar-nav-link-logo"></span> Application Pages
+                <span class="fa fa-chevron-right subnav-toggle-icon subnav-toggle-icon-closed"></span>
+                <span class="fa fa-chevron-down subnav-toggle-icon subnav-toggle-icon-opened"></span>
+            </a>
+                
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-link">
+                        <a href="log-in.html">
+                        <span class="typcn typcn-key sidebar-nav-link-logo"></span> Log In
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="forgot-password.html">
+                        <span class="typcn typcn-key-outline sidebar-nav-link-logo"></span> Forgot Password
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="sign-up.html">
+                        <span class="typcn typcn-plus-outline sidebar-nav-link-logo"></span> Sign Up
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/inbox.html">
+                        <span class="typcn typcn-folder-open sidebar-nav-link-logo"></span> Inbox <span class="badge badge-info sidebar-nav-link-badge">99+</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/inbox/view.html">
+                        <span class="typcn typcn-mail sidebar-nav-link-logo"></span> View Email
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/inbox/compose.html">
+                        <span class="typcn typcn-arrow-forward sidebar-nav-link-logo"></span> Compose Email
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/profile.html">
+                        <span class="typcn typcn-user sidebar-nav-link-logo"></span> Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/profile/update.html">
+                        <span class="typcn typcn-user-add sidebar-nav-link-logo"></span> Update Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/faqs.html">
+                        <span class="typcn typcn-info sidebar-nav-link-logo"></span> FAQs
+                        </a>
+                    </li>
+                                        <li class="sidebar-nav-link ">
+                        <a href="app-pages/calendar.html">
+                            <span class="typcn typcn-calendar sidebar-nav-link-logo"></span> Calendar
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/enquiry.html">
+                            <span class="typcn typcn-message sidebar-nav-link-logo"></span> Enquiry
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="app-pages/page-not-found.html">
+                            <span class="typcn typcn-warning-outline sidebar-nav-link-logo"></span> 404 Message
+                        </a>
+                    </li>
+                </ul>
+        </li>
+        <li class="sidebar-nav-heading">
+            Fundamentals
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="tables.html">
+                <span class="typcn typcn-th-small sidebar-nav-link-logo"></span> Tables
+            </a>
+        </li>
+        <li class="sidebar-nav-link  active ">
+            <a href="forms.html">
+                <span class="typcn typcn-clipboard sidebar-nav-link-logo"></span> Forms
+            </a>
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="chart-js.html">
+                <span class="typcn typcn-chart-line sidebar-nav-link-logo"></span> Chart.js <span class="badge badge-danger sidebar-nav-link-badge">3</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-link sidebar-nav-link-group ">
+            <a data-subnav-toggle>
+                <span class="typcn typcn-th-list sidebar-nav-link-logo"></span> UI Components
+                <span class="fa fa-chevron-right subnav-toggle-icon subnav-toggle-icon-closed"></span>
+                <span class="fa fa-chevron-down subnav-toggle-icon subnav-toggle-icon-opened"></span>
+            </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/alerts.html">
+                        <span class="typcn typcn-warning sidebar-nav-link-logo"></span> Alerts
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/buttons.html">
+                        <span class="typcn typcn-th-large sidebar-nav-link-logo"></span> Buttons
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/badges-and-labels.html">
+                        <span class="typcn typcn-tags sidebar-nav-link-logo"></span> Badges &amp; Labels
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/typography.html">
+                        <span class="typcn typcn-sort-alphabetically sidebar-nav-link-logo"></span> Typography
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/grid-system.html">
+                        <span class="typcn typcn-th-small-outline sidebar-nav-link-logo"></span> Grid System
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/panels.html">
+                        <span class="typcn typcn-tabs-outline sidebar-nav-link-logo"></span> Panels &amp; Widget Boxes
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/pagination.html">
+                        <span class="typcn typcn-arrow-right-outline sidebar-nav-link-logo"></span> Pagination
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="ui-components/progress-bars.html">
+                        <span class="typcn typcn-chart-bar sidebar-nav-link-logo"></span> Progress Bars
+                        </a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</aside>            <header class="top-header">
+    <a href="index.html" class="top-header-logo">
+            <span class="text-primary">Varello</span>Admin
+    </a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-sidebar-toggle" data-toggle-sidebar>
+                    <span class="typcn typcn-arrow-left visible-sidebar-sm-open"></span>
+                    <span class="typcn typcn-arrow-right visible-sidebar-sm-closed"></span>
+                    <span class="typcn typcn-arrow-left visible-sidebar-md-open"></span>
+                    <span class="typcn typcn-arrow-right visible-sidebar-md-closed"></span>
+                </button>
+            </div>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <form class="navbar-left navbar-search-form">
+                            <button type="submit" class="navbar-search-btn"><span class="fa fa-search"></span></button>
+                            <input type="text" class="navbar-search-box" placeholder="Find something...">
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" data-dropdown-in="flipInX" data-dropdown-out="zoomOut">
+                    <li class="hidden-sm hidden-xs hidden-md"><a href="#">Welcome to <strong>Varello</strong>Admin.</a></li>
+                    <li class="item-feed dropdown">
+                        <a href="#" class="item-feed-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-envelope"></span> <span class="badge badge-primary item-feed-badge">15</span></a>
+                        <ul class="dropdown-menu dropdown-menu-messages">
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="img/james-taylor.jpg" alt="James T">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-success"></span> James Taylor</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="img/user-1-profile.jpg" alt="Tyrone G">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-warning"></span> Tyrone G</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="img/user-3-profile.jpg" alt="James T">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-danger"></span> Sandra Nelvo</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link-lg" href="app-pages/inbox.html">
+                                    <span class="fa fa-envelope"></span> Go To Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-feed dropdown">
+                        <a href="#" class="item-feed-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bell"></span> <span class="badge badge-danger item-feed-badge">7</span></a>
+                        <ul class="dropdown-menu dropdown-menu-notifications">
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-smile-o"></span> You got 3 likes</span>
+                                    <span class="dropdown-menu-notifications-item-ago">3hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-line-chart"></span> Sales report available</span>
+                                    <span class="dropdown-menu-notifications-item-ago">12hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-credit-card-alt"></span> 248 new subscriptions</span>
+                                    <span class="dropdown-menu-notifications-item-ago">12hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link-md" href="#">
+                                    <small>
+                                        <span class="fa fa-bell"></span> See Notification History
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="log-in.html"><span class="fa fa-sign-out"></span> <span class="hidden-sm hidden-xs">Log out</span></a></li>
+                  </ul>
+        </div>
+    </nav>
+</header>            <div class="content-wrapper">
+                <div class="content-dimmer"></div>
+                <header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-clipboard page-header-heading-icon"></span> Basic Forms <small>With a few examples...</small></h1>
+                <p class="page-header-description">Bootstrap provides you with some great form variants and form element variants. These are displayed below</p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Vertical Form
+                </header>
+                <div class="widget-body">
+                    <form>
+                        <label for="username">Username *</label>
+                        <input type="text" name="username" id="username" class="form-control" placeholder="Type your username">
+                        <p class="help-block">Enter the username you registered with.</p>
+                        <label for="password">Password *</label>
+                        <input type="password" name="password" id="password" class="form-control" placeholder="Type your password">
+                        <p class="help-block">And your private password.</p>
+                        <div class="clearfix">
+                          <input type="checkbox" id="remember_me_1" data-icheck>
+                          <label for="remember_me_1" class="icheck-label">
+                            Keep me signed in
+                          </label>
+                        </div>
+                        <button type="button" class="btn btn-transparent">Log in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+        
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Horizontal Form
+                </header>
+                <div class="widget-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="username_2">Username</label>
+                            <div class="col-sm-9">
+                                <input type="text" name="username_2" id="username_2" class="form-control" placeholder="Type your username">
+                                <p class="help-block">Enter the username you registered with.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label" for="password_2">Password</label>
+                            <div class="col-sm-9">
+                            <input type="password" name="password_2" id="password_2" class="form-control" placeholder="Type your password">
+                            <p class="help-block">And your private password.</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9 col-sm-offset-3">
+                                  <input type="checkbox" id="remember_me_2" data-icheck>
+                                  <label for="remember_me_2" class="icheck-label">
+                                    Keep me signed in
+                                  </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9 col-sm-offset-3">
+                        <button type="button" class="btn btn-transparent">Log in</button></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Inline Form
+                </header>
+                <div class="widget-body">
+                    <form class="form-inline">
+                        <p>Please your login details below.</p>
+                      <div class="form-group">
+                        <label for="email_3">Email</label>
+                        <input type="text" class="form-control" name="email_3" id="email_3" placeholder="Jane Doe">
+                      </div>
+                      <div class="form-group">
+                        <label for="password_3">Password</label>
+                        <input type="password" class="form-control" id="password_3" placeholder="******">
+                      </div>
+                      <button type="submit" class="btn btn-transparent btn-transparent">Sign In</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="widget widget-default">
+                <div class="widget-header">Inline Form (No Labels)</div>
+                <div class="widget-body">
+                    <form class="form-inline">
+                      <p>Forgot your password? Fill in the fields below and we'll send you a reset form.</p>
+                      <div class="form-group">
+                        <label class="sr-only" for="email_4">Email address</label>
+                        <input type="email" class="form-control" name="email_4" id="email_4" placeholder="Email">
+                      </div>
+                      <div class="form-group">
+                        <label class="sr-only" for="date_of_birth_4">Date Of Birth</label>
+                        <input type="text" class="form-control" id="date_of_birth_4" placeholder="Date Of Birth">
+                      </div>
+                      <div class="form-group">
+                        <input type="checkbox" name="remember_me_4" id="remember_me_4" data-icheck>
+                        <label for="remember_me_4" class="icheck-label">
+                          Keep me signed in
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-transparent btn-transparent">Reset Password</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-6 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Element Sizing
+                </header>
+                <div class="widget-body">
+                    <form>
+                        <p>Bootstrap comes with plenty of elemnt sizing options for your inputs.</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder=".input-sm">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Default Size">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control input-lg" placeholder=".input-lg">
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control input-sm">
+                                <option value=".input-sm" selected>.input-sm</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option value="Default Size" selected>Default Size</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control input-lg">
+                                <option value=".input-lg" selected>.input-lg</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Horizontal Form Group Sizing
+                </header>
+                <div class="widget-body">
+                    <form class="form-horizontal">
+                      <div class="form-group form-group-lg">
+                        <label class="col-sm-2 control-label" for="formGroupInputLarge">Large label</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input">
+                        </div>
+                      </div>
+                      <div class="form-group form-group-sm">
+                        <label class="col-sm-2 control-label" for="formGroupInputSmall">Small label</label>
+                        <div class="col-sm-10">
+                          <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Small input">
+                        </div>
+                      </div>
+                    </form>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">Static Control</header>
+                <div class="widget-body">
+                <form class="form-horizontal">
+                  <p>You can use this when you need a non-editable, plain-text control within your form.</p>
+                  <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                      <p class="form-control-static">email@example.com</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-10">
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    </div>
+                  </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer class="content-wrapper-footer">
+    &copy; Copyright 2016 VarelloAdmin. Crafted with <span class="fa fa-heart"></span> by <a href="http://www.varellothemes.com" target="_blank">Varello Themes</a>.
+</footer></div>
+  
+            </div>
+        </div>
+    </div>
+<script src="js/Chart.min.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.piety.min.js"></script>
+<script src="js/varello-theme.js"></script>
+<script src="js/icheck.min.js"></script>
+<script src="js/dropdown.js"></script></body>
+</html>

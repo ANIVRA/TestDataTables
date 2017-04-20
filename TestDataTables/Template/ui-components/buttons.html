@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>VarelloAdmin</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/typicons.min.css">
+<link rel="stylesheet" href="../css/varello-theme.min.css">
+<link rel="stylesheet" href="../css/varello-skins.min.css">
+<link rel="stylesheet" href="../css/animate.min.css">
+<link rel="stylesheet" href="../css/icheck-all-skins.css">
+<link rel="stylesheet" href="../css/icheck-skins/flat/_all.css">
+<link href='https://fonts.googleapis.com/css?family=Hind+Vadodara:400,500,600,700,300' rel='stylesheet' type='text/css'>    <link rel="apple-touch-icon" sizes="57x57" href="../apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="../apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="../apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="../apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="../apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="../android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="../ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1"></head>
+<body >
+                <div class="notifications top-right"></div>
+    <div class="wrapper">
+        <div class="page-wrapper">
+            <aside class="left-sidebar">
+    <section class="sidebar-user-panel">
+        <div id="user-panel-slide-toggleable">
+            <div class="user-panel-profile-picture">
+                <img src="../img/user-1-profile.jpg" alt="Tyrone G">
+            </div>
+            <span class="user-panel-logged-in-text"><span class="fa fa-circle-o text-success user-panel-status-icon"></span> Logged in as <strong> Tyrone G</strong></span>
+            <a href="../app-pages/profile/update.html" class="user-panel-action-link"><span class="fa fa-pencil"></span> Manage your account</a>
+        </div>
+        <!-- <button class="user-panel-toggler" data-slide-toggle="user-panel-slide-toggleable"><span class="fa fa-chevron-up" data-slide-toggle-showing></span><span class="fa fa-chevron-down" data-slide-toggle-hidden></span></button> -->
+    </section>
+    <ul class="sidebar-nav">
+        <li class="sidebar-nav-heading">
+            Components
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="../index.html">
+                <span class="typcn typcn-home sidebar-nav-link-logo"></span> Dashboard
+            </a>
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="../widgets.html">
+                <span class="typcn typcn-shopping-bag sidebar-nav-link-logo"></span> Widgets <span class="badge badge-primary sidebar-nav-link-badge">6</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-link sidebar-nav-link-group ">
+            <a data-subnav-toggle>
+                <span class="typcn typcn-document sidebar-nav-link-logo"></span> Application Pages
+                <span class="fa fa-chevron-right subnav-toggle-icon subnav-toggle-icon-closed"></span>
+                <span class="fa fa-chevron-down subnav-toggle-icon subnav-toggle-icon-opened"></span>
+            </a>
+                
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-link">
+                        <a href="../log-in.html">
+                        <span class="typcn typcn-key sidebar-nav-link-logo"></span> Log In
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="../forgot-password.html">
+                        <span class="typcn typcn-key-outline sidebar-nav-link-logo"></span> Forgot Password
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="../sign-up.html">
+                        <span class="typcn typcn-plus-outline sidebar-nav-link-logo"></span> Sign Up
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/inbox.html">
+                        <span class="typcn typcn-folder-open sidebar-nav-link-logo"></span> Inbox <span class="badge badge-info sidebar-nav-link-badge">99+</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/inbox/view.html">
+                        <span class="typcn typcn-mail sidebar-nav-link-logo"></span> View Email
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/inbox/compose.html">
+                        <span class="typcn typcn-arrow-forward sidebar-nav-link-logo"></span> Compose Email
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/profile.html">
+                        <span class="typcn typcn-user sidebar-nav-link-logo"></span> Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/profile/update.html">
+                        <span class="typcn typcn-user-add sidebar-nav-link-logo"></span> Update Profile
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/faqs.html">
+                        <span class="typcn typcn-info sidebar-nav-link-logo"></span> FAQs
+                        </a>
+                    </li>
+                                        <li class="sidebar-nav-link ">
+                        <a href="../app-pages/calendar.html">
+                            <span class="typcn typcn-calendar sidebar-nav-link-logo"></span> Calendar
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/enquiry.html">
+                            <span class="typcn typcn-message sidebar-nav-link-logo"></span> Enquiry
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="../app-pages/page-not-found.html">
+                            <span class="typcn typcn-warning-outline sidebar-nav-link-logo"></span> 404 Message
+                        </a>
+                    </li>
+                </ul>
+        </li>
+        <li class="sidebar-nav-heading">
+            Fundamentals
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="../tables.html">
+                <span class="typcn typcn-th-small sidebar-nav-link-logo"></span> Tables
+            </a>
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="../forms.html">
+                <span class="typcn typcn-clipboard sidebar-nav-link-logo"></span> Forms
+            </a>
+        </li>
+        <li class="sidebar-nav-link ">
+            <a href="../chart-js.html">
+                <span class="typcn typcn-chart-line sidebar-nav-link-logo"></span> Chart.js <span class="badge badge-danger sidebar-nav-link-badge">3</span>
+            </a>
+        </li>
+        <li class="sidebar-nav-link sidebar-nav-link-group  active open ">
+            <a data-subnav-toggle>
+                <span class="typcn typcn-th-list sidebar-nav-link-logo"></span> UI Components
+                <span class="fa fa-chevron-right subnav-toggle-icon subnav-toggle-icon-closed"></span>
+                <span class="fa fa-chevron-down subnav-toggle-icon subnav-toggle-icon-opened"></span>
+            </a>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-nav-link ">
+                        <a href="alerts.html">
+                        <span class="typcn typcn-warning sidebar-nav-link-logo"></span> Alerts
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link  active ">
+                        <a href="buttons.html">
+                        <span class="typcn typcn-th-large sidebar-nav-link-logo"></span> Buttons
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="badges-and-labels.html">
+                        <span class="typcn typcn-tags sidebar-nav-link-logo"></span> Badges &amp; Labels
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="typography.html">
+                        <span class="typcn typcn-sort-alphabetically sidebar-nav-link-logo"></span> Typography
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="grid-system.html">
+                        <span class="typcn typcn-th-small-outline sidebar-nav-link-logo"></span> Grid System
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="panels.html">
+                        <span class="typcn typcn-tabs-outline sidebar-nav-link-logo"></span> Panels &amp; Widget Boxes
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="pagination.html">
+                        <span class="typcn typcn-arrow-right-outline sidebar-nav-link-logo"></span> Pagination
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link ">
+                        <a href="progress-bars.html">
+                        <span class="typcn typcn-chart-bar sidebar-nav-link-logo"></span> Progress Bars
+                        </a>
+                    </li>
+                </ul>
+        </li>
+    </ul>
+</aside>            <header class="top-header">
+    <a href="../index.html" class="top-header-logo">
+            <span class="text-primary">Varello</span>Admin
+    </a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-sidebar-toggle" data-toggle-sidebar>
+                    <span class="typcn typcn-arrow-left visible-sidebar-sm-open"></span>
+                    <span class="typcn typcn-arrow-right visible-sidebar-sm-closed"></span>
+                    <span class="typcn typcn-arrow-left visible-sidebar-md-open"></span>
+                    <span class="typcn typcn-arrow-right visible-sidebar-md-closed"></span>
+                </button>
+            </div>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <form class="navbar-left navbar-search-form">
+                            <button type="submit" class="navbar-search-btn"><span class="fa fa-search"></span></button>
+                            <input type="text" class="navbar-search-box" placeholder="Find something...">
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" data-dropdown-in="flipInX" data-dropdown-out="zoomOut">
+                    <li class="hidden-sm hidden-xs hidden-md"><a href="#">Welcome to <strong>Varello</strong>Admin.</a></li>
+                    <li class="item-feed dropdown">
+                        <a href="#" class="item-feed-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-envelope"></span> <span class="badge badge-primary item-feed-badge">15</span></a>
+                        <ul class="dropdown-menu dropdown-menu-messages">
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="../img/james-taylor.jpg" alt="James T">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-success"></span> James Taylor</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="../img/user-1-profile.jpg" alt="Tyrone G">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-warning"></span> Tyrone G</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-messages-item" href="#">
+                                    <div class="dropdown-menu-messages-item-image">
+                                        <img src="../img/user-3-profile.jpg" alt="James T">
+                                    </div>
+                                    <div class="dropdown-menu-messages-item-ago">3hr ago</div>
+                                    <div class="dropdown-menu-messages-item-content">
+                                        <div class="dropdown-menu-messages-item-content-from"><span class="fa fa-circle-o text-danger"></span> Sandra Nelvo</div>
+                                        <div class="dropdown-menu-messages-item-content-snippet">Hey there man, do you...</div>
+                                        <div class="dropdown-menu-messages-item-content-timestamp">12:03 AM on 19/05/2016</div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link-lg" href="../app-pages/inbox.html">
+                                    <span class="fa fa-envelope"></span> Go To Inbox
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="item-feed dropdown">
+                        <a href="#" class="item-feed-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="fa fa-bell"></span> <span class="badge badge-danger item-feed-badge">7</span></a>
+                        <ul class="dropdown-menu dropdown-menu-notifications">
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-smile-o"></span> You got 3 likes</span>
+                                    <span class="dropdown-menu-notifications-item-ago">3hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-line-chart"></span> Sales report available</span>
+                                    <span class="dropdown-menu-notifications-item-ago">12hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-notifications-item" href="#">
+                                    <span class="dropdown-menu-notifications-item-content"><span class="fa fa-credit-card-alt"></span> 248 new subscriptions</span>
+                                    <span class="dropdown-menu-notifications-item-ago">12hr ago</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-menu-link-md" href="#">
+                                    <small>
+                                        <span class="fa fa-bell"></span> See Notification History
+                                    </small>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="../log-in.html"><span class="fa fa-sign-out"></span> <span class="hidden-sm hidden-xs">Log out</span></a></li>
+                  </ul>
+        </div>
+    </nav>
+</header>            <div class="content-wrapper">
+                <div class="content-dimmer"></div>
+                <header class="page-header">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <h1 class="page-header-heading"><span class="typcn typcn-th-large page-header-heading-icon"></span> Buttons</h1>
+                <p class="page-header-description">As well as standard bootstrap buttons, we provide custom variants to allow you to give more context to them.
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Button Colours
+                </header>
+                <div class="widget-body">
+                    <p>The standard bootstrap buttons, plus extra variants that come with Varello</p>
+                    <a href="#" class="btn btn-default">Default</a>
+                    <a href="#" class="btn btn-white">White</a>
+                    <a href="#" class="btn btn-primary">Primary</a>
+                    <a href="#" class="btn btn-success">Success</a>
+                    <a href="#" class="btn btn-info">Info</a>
+                    <a href="#" class="btn btn-warning">Warning</a>
+                    <a href="#" class="btn btn-danger">Danger</a>
+                    <a href="#" class="btn btn-purple">Purple</a>
+                    <a href="#" class="btn btn-pink">Pink</a>
+                    <a href="#" class="btn btn-faded-blue">Faded Blue</a>
+                    <a href="#" class="btn btn-link">Link</a>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Transparent Buttons
+                </header>
+                <div class="widget-body">
+                    <p>These buttons fill with their chosen colour when you hover over them</p>
+                    <p>
+                        <a href="#" class="btn btn-transparent btn-transparent-default">Default</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-white">White</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-primary">Primary</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-success">Success</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-info">Info</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-warning">Warning</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-danger">Danger</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-purple">Purple</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-pink">Pink</a>
+                        <a href="#" class="btn btn-transparent btn-transparent-faded-blue">Faded Blue</a>
+                    </p>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Pill Buttons
+                </header>
+                <div class="widget-body">
+                    <p>The <code>.btn-pill</code> class gives all buttons a rounded look</p>
+                    <p>
+                        <a href="#" class="btn btn-pill btn-default">Default</a>
+                        <a href="#" class="btn btn-pill btn-white">White</a>
+                        <a href="#" class="btn btn-pill btn-primary">Primary</a>
+                        <a href="#" class="btn btn-pill btn-success">Success</a>
+                        <a href="#" class="btn btn-pill btn-info">Info</a>
+                        <a href="#" class="btn btn-pill btn-warning">Warning</a>
+                        <a href="#" class="btn btn-pill btn-danger">Danger</a>
+                        <a href="#" class="btn btn-pill btn-purple">Purple</a>
+                        <a href="#" class="btn btn-pill btn-pink">Pink</a>
+                        <a href="#" class="btn btn-pill btn-faded-blue">Faded Blue</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-default">Default</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-white">White</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-primary">Primary</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-success">Success</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-info">Info</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-warning">Warning</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-danger">Danger</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-purple">Purple</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-pink">Pink</a>
+                        <a href="#" class="btn btn-pill btn-transparent btn-transparent-faded-blue">Faded Blue</a>
+                    </p>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Button Sizes
+                </header>
+                <div class="widget-body">
+                    <p>Varello provides you with a fifth, XL button along with the default four that come with bootstrap</p>
+                    <p>
+                        <a href="#" class="btn btn-xl btn-default">Extra Large Button</a>
+                        <a href="#" class="btn btn-xl btn-white">Extra Large Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-lg btn-primary">Large Button</a>
+                        <a href="#" class="btn btn-lg btn-white">Large Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-success">Standard Button</a>
+                        <a href="#" class="btn btn-white">Standard Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-sm btn-warning">Small Button</a>
+                        <a href="#" class="btn btn-sm btn-white">Small Button</a>
+                    </p>
+                    <p>
+                        <a href="#" class="btn btn-xs btn-danger">Extra Small Button</a>
+                        <a href="#" class="btn btn-xs btn-white">Extra Small Button</a>
+                    </p>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Button Toolbar
+                </header>
+                <div class="widget-body">
+                    <p>Group collections of buttons together to make a toolbar-esque element flow</p>
+                    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                        <div class="btn-group btn-group-lg" role="group" aria-label="First group">
+                            <button type="button" class="btn btn-default">1</button>
+                            <button type="button" class="btn btn-default">2</button>
+                            <button type="button" class="btn btn-default">3</button>
+                            <button type="button" class="btn btn-default">4</button>
+                        </div>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Second group">
+                            <button type="button" class="btn btn-primary">5</button>
+                            <button type="button" class="btn btn-primary">6</button>
+                            <button type="button" class="btn btn-primary">7</button>
+                        </div>
+                        <div class="btn-group btn-group-lg" role="group" aria-label="Third group">
+                            <button type="button" class="btn btn-success"><span class="fa fa-copy"></span></button>
+                            <button type="button" class="btn btn-success"><span class="fa fa-paste"></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="widget widget-default">
+                <header class="widget-header">
+                    Button Dropdowns
+                </header>
+                <div class="widget-body">
+                    <p>When you need to place a dropdown within the flow of the content, use a button dropdown</p>
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Action <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+
+
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Action <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+
+
+            <div class="btn-group">
+              <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Action <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="widget widget-default">
+    <header class="widget-header">
+        Split-Button Dropdowns
+    </header>
+    <div class="widget-body">
+        <p>When you want to use a button dropdown, but want the main text to cause a different action than the caret (<span class="fa fa-caret"></span>), then use a split-button dropdown.</p>
+        <div class="btn-group">
+          <button type="button" class="btn btn-danger">Action</button>
+          <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Action</button>
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="caret"></span>
+        <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+<div class="btn-group">
+  <button type="button" class="btn btn-success">Action</button>
+  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+</button>
+<ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="widget widget-default">
+    <header class="widget-header">
+        Button Dropdown Sizes
+    </header>
+    <div class="widget-body">
+        <p>Like normal buttons, there are 5 variants that come with Varello</p>
+        <div class="btn-group">
+          <button class="btn btn-default btn-xl dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Extra Large button <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <div class="btn-group">
+      <button class="btn btn-primary btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Large button <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Another action</a></li>
+        <li><a href="#">Something else here</a></li>
+        <li role="separator" class="divider"></li>
+        <li><a href="#">Separated link</a></li>
+    </ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-success btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Default button <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+</ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-warning btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Small button <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+</ul>
+</div>
+
+<div class="btn-group">
+  <button class="btn btn-danger btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Extra small button <span class="caret"></span>
+</button>
+<ul class="dropdown-menu">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><a href="#">Separated link</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="widget widget-default">
+    <header class="widget-header">
+        Button Dropups
+    </header>
+    <div class="widget-body">
+        <p>To make a dropdown open from the top, use the <code>.dropup</code> class on the button group</p>
+        <div class="btn-toolbar" role="toolbar"> <div class="btn-group dropup"> <button type="button" class="btn btn-default">Dropup</button> <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button> <ul class="dropdown-menu"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </div> <div class="btn-group dropup"> <button type="button" class="btn btn-primary">Right dropup</button> <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <span class="caret"></span> <span class="sr-only">Toggle Dropdown</span> </button> <ul class="dropdown-menu dropdown-menu-right"> <li><a href="#">Action</a></li> <li><a href="#">Another action</a></li> <li><a href="#">Something else here</a></li> <li role="separator" class="divider"></li> <li><a href="#">Separated link</a></li> </ul> </div> </div>
+    </div>
+</div>
+
+
+</div>
+<div class="col-xs-12 col-md-6">
+    <div class="widget widget-default">
+        <header class="widget-header">
+            Block Level Buttons
+        </header>
+        <div class="widget-body">
+            <p>Make buttons span the entire width of their containing element</p>
+            <p>
+                <a href="#" class="btn btn-block btn-default">Block Level Button</a>
+                <a href="#" class="btn btn-block btn-primary">Block Level Button</a>
+                <a href="#" class="btn btn-block btn-success">Block Level Button</a>
+                <a href="#" class="btn btn-block btn-info">Block Level Button</a>
+            </p>
+            <p>These also work as pills, and with all the size variants</p>
+            <p>
+                <a href="#" class="btn btn-xl btn-pill btn-block btn-warning">Extra Large Button</a>
+                <a href="#" class="btn btn-lg btn-pill btn-block btn-danger">Large Button</a>
+                <a href="#" class="btn btn-pill btn-block btn-purple">Default Button</a>
+                <a href="#" class="btn btn-sm btn-pill btn-block btn-pink">Small Button</a>
+                <a href="#" class="btn btn-xs btn-pill btn-block btn-faded-blue">Extra Small Button</a>
+            </p>
+        </div>
+    </div>
+    <div class="widget widget-default">
+        <header class="widget-header">
+            Disabled State
+        </header>
+        <div class="widget-body">
+            <p>The disabled state can be applied through a <code>.disabled</code> class or the disabled property on buttons</p>
+            <a href="#" class="btn disabled btn-default">Default</a>
+            <a href="#" class="btn disabled btn-white">White</a>
+            <a href="#" class="btn disabled btn-primary">Primary</a>
+            <a href="#" class="btn disabled btn-success">Success</a>
+            <a href="#" class="btn disabled btn-info">Info</a>
+            <a href="#" class="btn disabled btn-warning">Warning</a>
+            <a href="#" class="btn disabled btn-danger">Danger</a>
+            <a href="#" class="btn disabled btn-purple">Purple</a>
+            <a href="#" class="btn disabled btn-pink">Pink</a>
+            <a href="#" class="btn disabled btn-faded-blue">Faded Blue</a>
+            <a href="#" class="btn disabled btn-link">Link</a>
+        </div>
+    </div>
+    <div class="widget widget-default">
+        <header class="widget-header">
+            Active State
+        </header>
+        <div class="widget-body">
+            <p>Like the disabled state, the active state can be applied like so</p>
+            <a href="#" class="btn active btn-default">Default</a>
+            <a href="#" class="btn active btn-white">White</a>
+            <a href="#" class="btn active btn-primary">Primary</a>
+            <a href="#" class="btn active btn-success">Success</a>
+            <a href="#" class="btn active btn-info">Info</a>
+            <a href="#" class="btn active btn-warning">Warning</a>
+            <a href="#" class="btn active btn-danger">Danger</a>
+            <a href="#" class="btn active btn-purple">Purple</a>
+            <a href="#" class="btn active btn-pink">Pink</a>
+            <a href="#" class="btn active btn-faded-blue">Faded Blue</a>
+            <a href="#" class="btn active btn-link">Link</a>
+        </div>
+    </div>
+    <div class="widget widget-default">
+        <header class="widget-header">
+            Button Groups
+        </header>
+        <div class="widget-body">
+            <p class="help-text">If buttons have related functionality, they can be placed in a button group like so, with 4 different size variations</p>
+            <span class="h5">Large</span>
+            <div class="btn-group btn-group-lg">
+                <a href="#" class="btn btn-default"><span class="fa fa-copy"></span> Copy</a>
+                <a href="#" class="btn btn-default"><span class="fa fa-paste"></span> Paste</a>
+                <a href="#" class="btn btn-default"><span class="fa fa-align-left"></span> Left</a>
+                <a href="#" class="btn btn-default"><span class="fa fa-align-center"></span> Center</a>
+                <a href="#" class="btn btn-default">Right <span class="fa fa-align-right"></span></a>
+            </div>
+            <span class="h5">Default</span>
+            <div class="btn-group">
+                <a href="#" class="btn btn-primary"><span class="fa fa-copy"></span> Copy</a>
+                <a href="#" class="btn btn-primary"><span class="fa fa-paste"></span> Paste</a>
+                <a href="#" class="btn btn-primary"><span class="fa fa-align-left"></span> Left</a>
+                <a href="#" class="btn btn-primary"><span class="fa fa-align-center"></span> Center</a>
+                <a href="#" class="btn btn-primary">Right <span class="fa fa-align-right"></span></a>
+            </div>
+            <span class="h5">Small</span>
+            <div class="btn-group btn-group-sm">
+                <a href="#" class="btn btn-success"><span class="fa fa-copy"></span> Copy</a>
+                <a href="#" class="btn btn-success"><span class="fa fa-paste"></span> Paste</a>
+                <a href="#" class="btn btn-success"><span class="fa fa-align-left"></span> Left</a>
+                <a href="#" class="btn btn-success"><span class="fa fa-align-center"></span> Center</a>
+                <a href="#" class="btn btn-success">Right <span class="fa fa-align-right"></span></a>
+            </div>
+            <span class="h5">Extra Small</span>
+            <div class="btn-group btn-group-xs">
+                <a href="#" class="btn btn-info"><span class="fa fa-copy"></span> Copy</a>
+                <a href="#" class="btn btn-info"><span class="fa fa-paste"></span> Paste</a>
+                <a href="#" class="btn btn-info"><span class="fa fa-align-left"></span> Left</a>
+                <a href="#" class="btn btn-info"><span class="fa fa-align-center"></span> Center</a>
+                <a href="#" class="btn btn-info">Right <span class="fa fa-align-right"></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="widget widget-default">
+        <header class="widget-header">
+            Button Group Nesting &amp; Mixing Colours
+        </header>
+        <div class="widget-body">
+            <p>Place a button group inside another one when you want a dropdown menu nested within them.</p>
+            <div class="btn-group btn-group-lg" role="group" aria-label="...">
+              <button type="button" class="btn btn-default">1</button>
+              <button type="button" class="btn btn-default">2</button>
+
+              <div class="btn-group btn-group-lg" role="group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown
+                  <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                  <li><a href="#">Dropdown link</a></li>
+                  <li><a href="#">Dropdown link</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="widget widget-default">
+    <header class="widget-header">
+        Vertical Button Groups
+    </header>
+    <div class="widget-body">
+        <p>The vertical button group variant comes with Bootstrap</p>
+        <div class="btn-group-vertical" role="group" aria-label="Vertical button group"> <button type="button" class="btn btn-default">Button</button> <button type="button" class="btn btn-default">Button</button> <div class="btn-group" role="group"> <button id="btnGroupVerticalDrop1" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </button> <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop1"> <li><a href="#">Dropdown link</a></li> <li><a href="#">Dropdown link</a></li> </ul> </div> <div class="btn-group" role="group"> <button id="btnGroupVerticalDrop2" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </button> <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop2"> <li><a href="#">Dropdown link</a></li> <li><a href="#">Dropdown link</a></li> </ul> </div> <div class="btn-group" role="group"> <button id="btnGroupVerticalDrop3" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </button> <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop3"> <li><a href="#">Dropdown link</a></li> <li><a href="#">Dropdown link</a></li> </ul> </div> <div class="btn-group" role="group"> <button id="btnGroupVerticalDrop4" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown <span class="caret"></span> </button> <ul class="dropdown-menu" aria-labelledby="btnGroupVerticalDrop4"> <li><a href="#">Dropdown link</a></li> <li><a href="#">Dropdown link</a></li> </ul> </div> </div>
+    </div>
+</div>
+
+<div class="widget widget-default">
+    <header class="widget-header">
+        Justified Button Groups
+    </header>
+    <div class="widget-body">
+        <p>Make a button group span the entire width of it's containing element</p>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Left</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Middle</button>
+        </div>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default">Right</button>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <div class="widget widget-default">
+            <header class="widget-header">
+                Faded Buttons
+            </header>
+            <div class="widget-body">
+                <p>The <code>.btn-faded</code> class allows you to keep a button active but have it faded-out until the user hovers over it.</p>
+                <p>
+                    <a href="#" class="btn btn-faded btn-default">Default</a>
+                    <a href="#" class="btn btn-faded btn-white">White</a>
+                    <a href="#" class="btn btn-faded btn-primary">Primary</a>
+                    <a href="#" class="btn btn-faded btn-success">Success</a>
+                    <a href="#" class="btn btn-faded btn-info">Info</a>
+                    <a href="#" class="btn btn-faded btn-warning">Warning</a>
+                    <a href="#" class="btn btn-faded btn-danger">Danger</a>
+                    <a href="#" class="btn btn-faded btn-purple">Purple</a>
+                    <a href="#" class="btn btn-faded btn-pink">Pink</a>
+                    <a href="#" class="btn btn-faded btn-faded-blue">Faded Blue</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-default">Default</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-white">White</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-primary">Primary</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-success">Success</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-info">Info</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-warning">Warning</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-danger">Danger</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-purple">Purple</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-pink">Pink</a>
+                    <a href="#" class="btn btn-faded btn-transparent btn-transparent-faded-blue">Faded Blue</a>
+                </p>
+                <p>
+                    <a href="#" class="btn btn-pill btn-faded btn-default">Default</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-white">White</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-primary">Primary</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-success">Success</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-info">Info</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-warning">Warning</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-danger">Danger</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-purple">Purple</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-pink">Pink</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-faded-blue">Faded Blue</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-default">Default</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-white">White</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-primary">Primary</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-success">Success</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-info">Info</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-warning">Warning</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-danger">Danger</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-purple">Purple</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-pink">Pink</a>
+                    <a href="#" class="btn btn-pill btn-faded btn-transparent btn-transparent-faded-blue">Faded Blue</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="content-wrapper-footer">
+    &copy; Copyright 2016 VarelloAdmin. Crafted with <span class="fa fa-heart"></span> by <a href="http://www.varellothemes.com" target="_blank">Varello Themes</a>.
+</footer><!-- END CONTAINER -->
+</div>
+  
+            </div>
+        </div>
+    </div>
+<script src="../js/Chart.min.js"></script>
+<script src="../js/jquery-1.12.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/jquery.piety.min.js"></script>
+<script src="../js/varello-theme.js"></script>
+<script src="../js/icheck.min.js"></script>
+<script src="../js/dropdown.js"></script></body>
+</html>

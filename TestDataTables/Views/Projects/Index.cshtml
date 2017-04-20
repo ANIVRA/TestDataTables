@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TestDataTables.Models.ProjectPMViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> Project Index </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Project.Name)
+                </th>
+                <th>
+                    Project Manager
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Project.Name)
+                    </td>
+                    @if (item.ProjectManager != null)
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ProjectManager.FirstName) @Html.DisplayFor(modelItem => item.ProjectManager.LastName)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            Not Assigned
+                        </td>
+                    }
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Project.Id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Project.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Project.Id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>

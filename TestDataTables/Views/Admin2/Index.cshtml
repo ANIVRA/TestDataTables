@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BugTracker_Reboot.Models.UsersViewModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Add Role", "AddUserRole")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Roles
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.LastName)
+            </td>
+            <td>
+                @foreach (var role in item.Roles)
+                {
+                    <p>@role</p>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+

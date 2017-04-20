@@ -1,0 +1,46 @@
+﻿@using TestDataTables.Models
+@model LoginViewModel
+
+
+<div class="log-in-wrapper">
+    <h1 class="log-in-title">Welcome to <strong class="text-primary">Varello</strong>Admin<br><small>Please enter your details</small></h1>
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control input-lg", @id = "email", placeholder = "Please enter your email address..." })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control input-lg", @id = "password", placeholder = "And your password..." })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="checkbox" id="RememberMe" name="RememberMe" data-icheck>
+                <label for="RememberMe" class="icheck-label">
+                    Keep me signed in
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-12">
+                <input type="submit" value="Log in" class="btn btn-transparent btn-lg btn-transparent-primary btn-block" />
+            </div>
+        </div>
+
+        <ul class="login-bottom-links">
+            <li>@Html.ActionLink("Forgot your password?", "ForgotPassword")</li>
+            <li>@Html.ActionLink("Need an account?", "Register")</li>
+        </ul>
+    }
+</div>
+
+

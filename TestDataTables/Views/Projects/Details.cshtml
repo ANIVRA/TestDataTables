@@ -1,0 +1,270 @@
+﻿@model TestDataTables.Models.ProjectDetailViewModel
+
+<h2>Details</h2>
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css" />
+
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> @Model.Project.Name <small> Details </small> </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="box-info shadow">
+                    <div class="row">
+                        <!-- priority donut -->
+                        <div class="col-md-4">
+                            <h2>Tickets By Status</h2>
+                            <div id="ticketsByPriority" class="box-content">
+                                <div id="priorityDonut" style="height: 125px;" class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                        <!--action donut-->
+                        <div class="col-md-4">
+                            <h2>Tickets By Type</h2>
+                            <div id="ticketByAction" class="box-content">
+                                <div id="actionDonut" style="height: 125px;" class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                        <!--phase donut-->
+                        <div class="col-md-4">
+                            <h2>Tickets By Priority</h2>
+                            <div id="ticketsByPhase" class="box-content">
+                                <div id="phaseDonut" style="height: 125px;" class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<div class="container-fluid">
+                @using (Ajax.BeginForm("AssgnPM", "Projects", new AjaxOptions
+                {
+                    HttpMethod = "Post",
+                    UpdateTargetId = "PM"
+                }))
+                {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(m => m.Project.Id)
+                <div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.PMUsers, "Project Managers", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(item => item.SelectedPM, Model.PMUsers, null, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Assign" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>*@
+        <div class="container-fluid">
+
+            @using (Ajax.BeginForm("AddUsers", new AjaxOptions
+            {
+                InsertionMode = InsertionMode.Replace,
+                UpdateTargetId = "PUsers"
+            }))
+            {
+                <input name="id" value="@Model.Project.Id" type="hidden" />
+                <div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TeamMembers, "Developers", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.ListBoxFor(item => item.SelectedUsers, Model.TeamMembers, new { @class = "form-control" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Assign Developer(s)" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <hr />
+        <div id="PUsers">
+            @Html.Partial("_TeamMembers", Model)
+        </div>
+
+        <hr />
+
+        <div>
+            <h4>Project</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Project.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Project.Name)
+                </dd>
+
+            </dl>
+            <dl class="dl-horizontal">
+                <dt>
+                    Project Users
+                </dt>
+
+                <dd>
+                    @foreach (var users in Model.Project.Users)
+                    {
+                        <p>@users.FirstName @users.LastName</p>
+                    }
+                </dd>
+
+            </dl>
+
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Assigned Developer
+                                </th>
+                                <th>
+                                    Priority
+                                </th>
+                                <th>
+                                    Status
+                                </th>
+                                <th>
+                                    Title
+                                </th>
+                                <th>
+                                    Created
+                                </th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.Project.Tickets)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.AssignedToUser.FirstName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TicketPriority.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TicketStatus.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Title)
+                                    </td>
+                                    <td>
+                                        @item.Created.Date.ToString("MM.dd.yyyy")
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "Edit", "Tickets", new { id = item.Id }, null) |
+                                        @Html.ActionLink("Details", "Details", "Tickets", new { id = item.Id }, null) |
+                                        @Html.ActionLink("Delete", "Delete", "Tickets", new { id = item.Id }, null)
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Project.Id }) |
+            @Html.ActionLink("Back to List", "Index") |
+            @Html.ActionLink("Add a Ticket", "Create", "Tickets", new { projectId = Model.Project.Id }, null) |
+            @Html.ActionLink("Assign PM", "AssignPM", new { id = Model.Project.Id }) |
+            @Html.ActionLink("Add Developers", "AddDEV", new { id = Model.Project.Id })
+
+        </p>
+    </div>
+</div>
+
+
+@section scripts{
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="~/Scripts/morris.js"></script>
+    <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <!--Initialize DataTables-->
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#pY").on("click", function() {
+                var selUsers = $('#SelectedUsers').val();
+                var prjId = $('#id').val();
+                $.ajax({
+                    url: @Url.Action("AddUsers", "Projects", new { id = prjId, SelectedUsers = selUsers }),
+                    type: "GET",
+                    data: { year: ((val * 1) + 1) }
+                })
+
+                .done(function(partialViewResult) {
+                    $("#refTable").html(partialViewResult);
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#ddlCategory").change(function () {
+                var categoryId =  $("#ddlCategory").val();
+                $("#dvCategoryResults")
+                    .load('@(Url.Action("GetCategoryProducts",
+                       "Home",
+                       null,
+                       Request.Url.Scheme))?categoryId=' + categoryId);
+            });
+        });
+    </script>
+
+    <script>
+
+        $.post('@Url.Action("GetCharts", "Home")').then(function (response) {
+            new Morris.Donut({
+                element: 'priorityDonut',
+                data: response.priorityDonut,
+                colors: ['#d48311', '#ed9c28', '#f0a742', '#f4bd71', '#f7d3a1', '#fbe9d0', '#ffffff'],
+                resize: true,
+            })
+            new Morris.Donut({
+                element: 'actionDonut',
+                data: response.actionDonut,
+                colors: ['#d48311', '#ed9c28', '#f0a742', '#f4bd71', '#f7d3a1', '#fbe9d0', '#ffffff'],
+                resize: true,
+            })
+            new Morris.Donut({
+                element: 'phaseDonut',
+                data: response.phaseDonut,
+                colors: ['#d48311', '#ed9c28', '#f0a742', '#f4bd71', '#f7d3a1', '#fbe9d0', '#ffffff'],
+                resize: true,
+            })
+        });
+    </script>
+}

@@ -1,0 +1,248 @@
+﻿@model TestDataTables.Models.TrackerModels.Ticket
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@using Microsoft.AspNet.Identity;
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" type="text/css" />
+<link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" type="text/css" />
+
+
+<div class="content-wrapper">
+    <div class="content-dimmer"></div>
+    <header class="page-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <h1 class="page-header-heading"><span class="typcn typcn-home page-header-heading-icon"></span> Ticket Details </h1>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <button type="button" class="btn btn-transparent btn-xl btn-faded pull-right visible-lg visible-md"><span class="fa fa-paint-brush"></span> Settings</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+
+        <div>
+            <h4>Ticket</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.AssignedToUser.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.AssignedToUser.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.OwnerUser.FirstName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.OwnerUser.FirstName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Project.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Project.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TicketPriority.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TicketPriority.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TicketStatus.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TicketStatus.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.TicketType.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.TicketType.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Created)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Created)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Updated)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Updated)
+                </dd>
+
+            </dl>
+        </div>
+        @{
+            var userId = User.Identity.GetUserId();
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        @if (User.IsInRole("Admin") || User.IsInRole("ProjectManager") || Model.OwnerUserId == userId || Model.AssignedToUserId == userId)
+                        {
+                            <div>
+                                <h4>Leave a comment</h4>
+                                @using (Html.BeginForm("CreateComment", "Tickets", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-group">
+                                        @*<input type="hidden" name="TicketId" value="@Model.Id" />*@
+                                        @Html.Hidden("TicketId", Model.Id)
+                                    </div>
+                                    <div class="form-group">
+                                        @*<input type="hidden" name="UserId" value="@userId" />*@
+                                        @Html.Hidden("UserId", userId)
+                                    </div>
+                                    <div class="form-group">
+                                        @*<textarea class="form-control" name="Comment" rows="3"></textarea>*@
+                                        @Html.TextArea("Comment", new { @class = "form-control", rows = "3" })
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"> Comments</h3>
+                    </div>
+
+                    <div class="mrgn-2">
+                        @foreach (var com in Model.TicketComments)
+                        {
+                            <p>Created on : @com.Created.DateTime.ToLongDateString()</p>
+                            <p>By : @com.User.DisplayName</p>
+                            <p>@com.Comment</p>
+                            <p>
+                                @if (userId == com.UserId || User.IsInRole("Admin"))
+                                {
+                                    @Html.ActionLink("Edit Comment", "EditComm", "CommAttach", new { id = com.Id }, null)<span> | </span>
+                                    @Html.ActionLink("Delete Comment", "DelComm", "CommAttach", new { id = com.Id }, null)
+                                }
+                            </p>
+                            <br />
+                        }
+                    </div>
+
+                </div>
+            </div>
+        }
+
+        <h2>History</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <table id="example" class="display">
+                    <thead>
+                        <tr>
+                            <th>
+                                User
+                            </th>
+                            <th>
+                                Change Date
+                            </th>
+                            <th>
+                                Property
+                            </th>
+                            <th>
+                                Changed From
+                            </th>
+                            <th>
+                                Changed To
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.TicketHistories)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FirstName)
+                    </td>
+                    <td>
+                        @item.Changed.Date.ToLongDateString()
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Property)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OldValue)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NewValue)
+                    </td>
+                </tr>
+                }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn-sm btn-primary" }) |
+            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn-sm btn-primary" }) |
+            @Html.ActionLink("Assign Dev", "AssignDev", new { ticketId = Model.Id }, new { @class = "btn-sm btn-primary" })
+        </p>
+        </div>
+</div>
+        @section scripts{
+
+            <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+            <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+            <script src="//cdn.datatables.net/1.10.13/js/dataTables.jqueryui.min.js"></script>
+
+            @*<script>
+                    $(document).ready(function () {
+                        $('.table').DataTable();
+                    });
+                </script>*@
+            <script>
+                $(document).ready(function () {
+                    $('#example').DataTable({
+                        "searching": false
+                    });
+                });
+            </script>
+        }
