@@ -302,5 +302,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+# Personal Files
+# =========================
 **/dbconnection.config
 private.config
